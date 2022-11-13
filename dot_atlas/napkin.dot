@@ -1,0 +1,10 @@
+digraph G {
+
+ u_1->w,z;
+ u_2->w,x;
+ w->z;
+ z->x;
+ x->y;
+ u_1 [style=dashed]
+ u_2 [style=dashed]
+}

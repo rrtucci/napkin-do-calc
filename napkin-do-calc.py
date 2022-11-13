@@ -1,0 +1,1 @@
+def build_random_napkin_bnet():
