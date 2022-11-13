@@ -6,3 +6,5 @@ for randomly generated probabilities. We find
 the surprsing result
 that the accepted formula simplifies considerably. See the
 following notebook for the details:
+
+https://github.com/rrtucci/napkin-do-calc/blob/master/napkin1.ipynb
