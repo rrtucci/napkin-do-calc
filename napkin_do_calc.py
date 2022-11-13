@@ -88,7 +88,7 @@ def run(draw=True, jupyter=False):
     for z_val in range(nd_to_size['z']):
         print("\nz=", z_val, ", numpy array indices= ['x', 'y']")
         pprint(arr_zxy[z_val, :, :])
-    print("\nSURPRISE!!!: They are equal to P(y|x) for all values of z."
+    print("\nSURPRISE!!!: They are equal to P(y|x) for all values of z.")
 
 
 if __name__ == "__main__":
