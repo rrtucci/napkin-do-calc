@@ -2,6 +2,7 @@ from potentials.DiscreteCondPot import *
 from graphs.BayesNet import *
 from pprint import pprint
 
+
 def create_random_bnet(nodes,
                        arrows,
                        nd_to_size):
@@ -48,7 +49,25 @@ def create_random_bnet(nodes,
     # print("aadf", bnet)
     return bnet
 
+
 def run(draw=True, jupyter=False):
+    """
+    This method creates a random Napkin bnet, and evaluates the widely
+    accepted adjustment formula (AF) for P(y|do(x)) for all z.
+
+    Parameters
+    ----------
+    draw: bool
+        True iff draw Napkin bnet
+    jupyter: bool
+        Use True if drawing to a jupyter notebook and False if drawing to
+        the console.
+
+    Returns
+    -------
+    None
+
+    """
     nodes, arrows = DotTool.read_dot_file("dot_atlas/napkin.dot")
     nd_to_size = {}
     for nd in nodes:
@@ -64,7 +83,7 @@ def run(draw=True, jupyter=False):
     print(bnet)
 
     node_list = list(bnet.nodes)
-    pot_wzxy= node_list[0].potential
+    pot_wzxy = node_list[0].potential
     for k in range(1, len(node_list)):
         pot_wzxy = pot_wzxy*node_list[k].potential
 
