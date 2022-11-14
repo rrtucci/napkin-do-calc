@@ -58,7 +58,7 @@ def run(draw=True, jupyter=False):
     Parameters
     ----------
     draw: bool
-        True iff draw Napkin bnet
+        Use True iff you want to draw the Napkin bnet
     jupyter: bool
         Use True if drawing to a jupyter notebook and False if drawing to
         the console.
