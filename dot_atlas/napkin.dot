@@ -1,7 +1,7 @@
 digraph G {
 
- u_1->w,z;
- u_2->w,x;
+ u_1->w,x;
+ u_2->w,y;
  w->z;
  z->x;
  x->y;

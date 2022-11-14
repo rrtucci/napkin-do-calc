@@ -103,11 +103,20 @@ def run(draw=True, jupyter=False):
     final_pot.set_to_transpose([nd_z, nd_x, nd_y])
     arr_zxy = final_pot.pot_arr
 
-    print("P(y| do(x)) arrays for each value of z:")
+    arr_y_bar_x = final_pot.get_new_marginal([nd_x, nd_y]).pot_arr
+    pot_y_bar_x = DiscreteCondPot(False, [nd_x, nd_y], arr_y_bar_x)
+    pot_y_bar_x.normalize_self()
+    prob_y_bar_x = pot_y_bar_x.pot_arr
+
+
+    print("P(y|x):")
+    pprint(prob_y_bar_x)
+
+    print("\nP(y| do(x)) arrays for each value of z:")
     for z_val in range(nd_to_size['z']):
         print("\nz=", z_val, ", numpy array indices= ['x', 'y']")
         pprint(arr_zxy[z_val, :, :])
-    print("\nSURPRISE!!!: They are equal to P(y|x) for all values of z.")
+    print("\nSurprise!!!: P(y|do(x)) = P(y|x) for all z")
 
 
 if __name__ == "__main__":
