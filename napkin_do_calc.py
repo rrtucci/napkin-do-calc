@@ -92,6 +92,7 @@ def run(draw=True, jupyter=False):
     nd_x = bnet.get_node_named('x')
     nd_y = bnet.get_node_named('y')
 
+    pot_wzxy = pot_wzxy.get_new_marginal([nd_w, nd_z, nd_x, nd_y])
     pot_wz = pot_wzxy.get_new_marginal([nd_w, nd_z])
     pot_w = pot_wz.get_new_marginal([nd_w])
 
