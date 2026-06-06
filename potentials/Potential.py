@@ -339,7 +339,7 @@ class Potential:
         """
         mag= magnitude. Returns the norm of self.pot_arr, where by norm we
         mean the usual norm used in Quantum Mechanics, called either
-        Frobenius or 2-norm, \sqrt(\sum_index  abs(pot_arr[index])^2)
+        Frobenius or 2-norm, sqrt(sum_index  abs(pot_arr[index])^2)
 
         Parameters
         ----------
