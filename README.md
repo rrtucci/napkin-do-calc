@@ -17,6 +17,9 @@ P(y|do(x)) = P(y|x)
 
 So the accepted AF seems overly complicated.
 See the
-following notebook for the details:
+![this](https://github.com/rrtucci/napkin-do-calc/blob/master/napkin1.ipynb)
+notebook for the details.
 
-https://github.com/rrtucci/napkin-do-calc/blob/master/napkin1.ipynb
+ADDENDUM: A more recent github repo  
+that is a superset of this repo can be found 
+here: ![dag_iden_detector](https://github.com/rrtucci/dag_iden_detector)
